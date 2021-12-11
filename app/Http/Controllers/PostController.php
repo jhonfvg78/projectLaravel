@@ -85,6 +85,7 @@ class PostController extends Controller
      */
     public function destroy(Post $post)
     {
-        //
+        $post-> delete();
+        return back()->with('status',"Publicacion eliminada con exito");
     }
 }
